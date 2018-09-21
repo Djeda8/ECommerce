@@ -1,32 +1,39 @@
+﻿using ECommerceApp3.Pages;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace ECommerceApp3
 {
+	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class App : Application
 	{
-		public App ()
+        public static NavigationPage Navigator { get; internal set; }
+
+        public App ()
 		{
 			InitializeComponent();
-
-			MainPage = new MainPage();
+            MainPage = new MasterPage();
 		}
 
-		protected override void OnStart ()
-		{
-			// Handle when your app starts
-		}
+        protected override void OnStart()
+        {
+            
+        }
 
-		protected override void OnSleep ()
-		{
-			// Handle when your app sleeps
-		}
+        protected override void OnSleep()
+        {
 
-		protected override void OnResume ()
-		{
-			// Handle when your app resumes
-		}
-	}
+        }
+
+        protected override void OnResume()
+        {
+
+        }
+    }
 }
