@@ -13,17 +13,23 @@ namespace ECommerceApp3
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class App : Application
 	{
+        #region Propierties
         public static NavigationPage Navigator { get; internal set; }
+        public static MasterPage Master { get; internal set; }
+        #endregion
 
-        public App ()
-		{
-			InitializeComponent();
+        #region Constructors
+        public App()
+        {
+            InitializeComponent();
             MainPage = new MasterPage();
-		}
+        }
+        #endregion
 
+        #region Methods
         protected override void OnStart()
         {
-            
+
         }
 
         protected override void OnSleep()
@@ -35,5 +41,7 @@ namespace ECommerceApp3
         {
 
         }
+        #endregion
+
     }
 }
