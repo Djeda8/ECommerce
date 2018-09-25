@@ -39,5 +39,10 @@ namespace ECommerceApp3.Services
                     break;
             }
         }
+
+        internal void SetMainPage()
+        {
+            App.Current.MainPage = new MasterPage();
+        }
     }
 }
