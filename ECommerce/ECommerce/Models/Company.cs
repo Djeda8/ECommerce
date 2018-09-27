@@ -37,13 +37,15 @@ namespace ECommerce.Models
         [Required(ErrorMessage = "The field {0} is required")]
         [Range(1, double.MaxValue, ErrorMessage = "You must select a {0}")]
         public int CityId { get; set; }
-
+        
         [NotMapped]
         public HttpPostedFileBase LogiFile { get; set; }
 
         public virtual Department Department { get; set; }
 
         public virtual City City { get; set; }
+
+        public virtual ICollection<User> Users { get; set; }
 
     }
 }
