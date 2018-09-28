@@ -57,7 +57,8 @@ namespace ECommerce.Controllers
             {
                 db.Users.Add(user);
                 db.SaveChanges();
-                
+                UsersHelper.CreateUserASP(user.UserName, "User");
+
                 if (user.PhotoFile != null)
                 {
                     var folder = "~/Content/Users";
